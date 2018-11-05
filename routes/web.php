@@ -19,4 +19,4 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/tescik/{id}', function ($id) {
     return view('testowa', ['numerek' => $id]);
-});
+}); 
