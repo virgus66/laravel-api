@@ -15,8 +15,16 @@
     return view('welcome');
 }); */
 
+
 Route::get('/', 'PagesController@index');
 
+
 Route::get('/tescik/{id}', function ($id) {
-    return view('testowa', ['numerek' => $id]);
+    return view('pages.testowa', ['numerek' => $id]);
 }); 
+
+
+Route::get('/provider', 'PagesController@provider');
+
+
+Route::resource('provider', 'ProvidersController');
