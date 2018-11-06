@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Provider;
+use DB;
 
 class ProvidersController extends Controller
 {
@@ -13,7 +15,15 @@ class ProvidersController extends Controller
      */
     public function index()
     {
-        //
+        $prov = Provider::all();
+        $prov = Provider::orderBy('created_at', 'desc')->get();
+        $prov = DB::select('SELECT * FROM providers WHERE id=3'); //or return to see query result
+        $prov = Provider::orderBy('title','desc')->take(1)->get();
+
+        $prov = Provider::orderBy('title', 'desc')->paginate(2);
+
+        //return Provider::where('title', 'new2')->get();
+        return view('providers.index')->with('providers', $prov);
     }
 
     /**
@@ -45,7 +55,8 @@ class ProvidersController extends Controller
      */
     public function show($id)
     {
-        //
+        $prov = Provider::find($id);
+        return view('providers.show')->with('details', $prov);
     }
 
     /**

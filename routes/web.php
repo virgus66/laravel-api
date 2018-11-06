@@ -27,4 +27,7 @@ Route::get('/tescik/{id}', function ($id) {
 Route::get('/providers-list', 'PagesController@provider');
 
 
-Route::resource('provider', 'ProvidersController');
+Route::resource('/providers', 'ProvidersController');
+
+
+Route::resource('/routes', 'RoutesController');
