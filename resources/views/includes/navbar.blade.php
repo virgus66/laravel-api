@@ -6,17 +6,20 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="http://localhost/laravel-api/public/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="http://localhost/laravel-api/public/tescik/12432123">Tescik</a>
+            <a class="nav-link" href="/tescik/12432123">Tescik</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="http://localhost/laravel-api/public/provider">Provider</a>
+            <a class="nav-link" href="/providers-list">Providerss List</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="/providers">Providers</a>
+        </li>
+{{--         <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
+        </li> --}}
         </ul>
         <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

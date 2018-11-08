@@ -9,7 +9,7 @@
     @if( count($providers) > 0 )
         @foreach( $providers as $provider )
             <div class="well" style="border: 1px solid grey; border-radius: 5px; background-color: white; margin-bottom: 10px; padding: 5px;">
-                <h3><a href="http://localhost/laravel/projekt-przewozy/public/providers/{{ $provider->id }}">{{ $provider->title }}</a></h3>
+                <h3><a href="/providers/{{ $provider->id }}">{{ $provider->title }}</a></h3>
                 <small>{{ $provider->created_at }}</small>
             </div>
         @endforeach
