@@ -11,23 +11,23 @@
 |
 */
 
+use App\Http\Middleware\IfStartsWithS;
+
 /* Route::get('/', function () {
     return view('welcome');
 }); */
 
-
 Route::get('/', 'PagesController@index');
-
-
-Route::get('/tescik/{id}', function ($id) {
-    return view('pages.testowa', ['numerek' => $id]);
-}); 
-
-
+Route::get('/tescik/{id}', [
+    'middleware' => 'App\Http\Middleware\IfStartsWithS',
+    function ($id) {
+        return view('pages.testowa', ['numerek' => $id]);
+    }]
+);
 Route::get('/providers-list', 'PagesController@provider');
-
-
 Route::resource('/providers', 'ProvidersController');
-
-
 Route::resource('/routes', 'RoutesController');
+
+Route::get('/tescik', function() {
+    return "test przeszedl";
+})->middleware('starts.with.s');
