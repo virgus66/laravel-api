@@ -17,7 +17,7 @@ class ProvidersController extends Controller
     {
         $prov = Provider::all();
         $prov = Provider::orderBy('created_at', 'desc')->get();
-        $prov = DB::select('SELECT * FROM providers WHERE id=3'); //or return to see query result
+        $prov = DB::select('SELECT * FROM providers WHERE id=3'); // return to see query result
         $prov = Provider::orderBy('title','desc')->take(1)->get();
 
         $prov = Provider::orderBy('title', 'desc')->paginate(2);

@@ -17,7 +17,7 @@ class PagesController extends Controller
 
         $data = (array) [
             'site_title' => 'Providerzy',
-            'providers' => [
+            'providers'  => [
                 [
                     'name'    => 'Janek',
                     'title'   => 'szeregowy zmywak',
@@ -38,5 +38,27 @@ class PagesController extends Controller
         ];
 
         return view('pages.provider')->with($data);
+    }
+
+    public function middleware_view() {
+        $data = (array) [
+            'site_title' => "Middleware site",
+            'data'       => [
+                [
+                    'name' => 'middleware 1',
+                    'desc' => 'short description 1 of this middleware' 
+                ],
+                [
+                    'name' => 'middleware 2',
+                    'desc' => 'short description 2 of this middleware' 
+                ],
+                [
+                    'name' => 'middleware 3',
+                    'desc' => 'short description 3 of this middleware' 
+                ],
+            ]
+        ];
+
+        return view('pages.middleware')->with($data);
     }
 }

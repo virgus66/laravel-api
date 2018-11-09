@@ -19,13 +19,12 @@ class IfStartsWithS
         // if ( preg_match('/^s.*/',strtolower( 'gfdgdfgfd' )) ) {
         //    return redirect('/');
         // } 
-        $nb = $request->route('numerek');
+        $nb = $request->route('id');            // returns specific parameter
+        //dd($request->route()->parameters());    // returns all parameters as an array
 
-        dd($request->route('numerek'));
-
-/*         if ( $nb > 10 ) {
+        if ( $nb > 10 ) {
             return redirect('/');
-        } */
+        }
 
         return $next($request);
     }

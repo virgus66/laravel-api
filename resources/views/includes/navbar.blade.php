@@ -9,13 +9,17 @@
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/tescik/12432123">Tescik</a>
+            <a class="nav-link" href="/tescik/10/param2/param3stronaZwrociHomeJesliParam1WiekszyOd10">Tescik</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/providers-list">Providerss List</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/providers">Providers</a>
+        </li>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/middleware">Middleware</a>
         </li>
 {{--         <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
