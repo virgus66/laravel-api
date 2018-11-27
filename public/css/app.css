@@ -10468,7 +10468,7 @@ a.text-dark:focus {
 
 nav {
   border: 1px solid grey;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -10478,6 +10478,10 @@ h1 {
 
 h4 {
   font-size: 20px;
+}
+
+.alert {
+  margin-top: 5px;
 }
 
 .navbar-laravel {

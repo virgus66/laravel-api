@@ -13,29 +13,33 @@
 
 use App\Http\Middleware\IfStartsWithS;
 
-/* Route::get('/', function () {
+/* 
+Route::get('/', function () {
     return view('welcome');
-}); */
+});
+*/
 
 Route::get('/', 'PagesController@index');
-//two ways of applying middleware, as an array or using middleware() method
-/* Route::get('/tescik/{id}', [
+Route::get('/providers-list', 'PagesController@provider');
+Route::resource('/providers', 'ProvidersController');
+Route::resource('/routes', 'RoutesController');
+
+
+// ---two ways of applying middleware, as an array or using middleware() method
+/* 
+Route::get('/tescik/{id}', [
     'middleware' => 'App\Http\Middleware\IfStartsWithS',
     function ($id) {
         return view('pages.testowa', ['numerek' => $id]);
     }]
-); */
+); 
+*/
 Route::get('/tescik/{id}/{nb2}/{nb3}', 
     function ($id) {
         return view('pages.testowa', ['numerek' => $id]);
     }
 )->middleware('starts.with.s');
-Route::get('/providers-list', 'PagesController@provider');
-Route::resource('/providers', 'ProvidersController');
-Route::resource('/routes', 'RoutesController');
-
 Route::get('/tescik', function() {
     return "test przeszedl";
 })->middleware('starts.with.s');
-
 Route::get('/middleware', 'PagesController@middleware_view');

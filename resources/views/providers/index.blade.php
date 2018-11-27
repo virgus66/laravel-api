@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('page-content')
-    <h1 style="margin-top: 90px;">Services Providers</h1>
-    <small style="margin-bottom: 100px;">index</small>
-
-    <br><Br><br><br>
+    <h1>Services Providers</h1>
+    
+    <div class="text-right"><button class='btn btn-primary' onclick='location.href ="providers/create"'>Add provider</button></div>
+    <div><small>list:</small></div>
 
     @if( count($providers) > 0 )
         @foreach( $providers as $provider )
@@ -13,7 +13,6 @@
                 <small>{{ $provider->created_at }}</small>
             </div>
         @endforeach
-
         {{ $providers->links() }}
     @else 
         <p>No posts found</p>

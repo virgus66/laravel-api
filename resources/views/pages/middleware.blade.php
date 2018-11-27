@@ -2,7 +2,7 @@
 
 
 @section('page-content')
-    <h1 style="margin-top: 90px;">{{ $site_title }}</h1>
+    <h1>{{ $site_title }}</h1>
     <p>data:</p>
 
 
