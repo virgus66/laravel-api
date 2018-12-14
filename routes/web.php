@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/', 'PagesController@index');
 Route::get('/providers-list', 'PagesController@provider');
 Route::resource('/providers', 'ProvidersController');
-Route::resource('/routes', 'RoutesController');
+Route::resource('/routes', 'RoutesController')/* ->except(['store','create','destroy']) */;
 Route::get('/middleware', 'PagesController@middleware_view');
 
 // ---two ways of applying middleware, as an array or using middleware() method

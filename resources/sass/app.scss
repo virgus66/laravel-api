@@ -15,3 +15,16 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+nav.navbar-dark {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+#app {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  width: 500px;
+  transform: translateX(-50%);
+}
