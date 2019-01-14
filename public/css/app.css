@@ -10468,7 +10468,7 @@ a.text-dark:focus {
 
 nav {
   border: 1px solid grey;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -10476,9 +10476,32 @@ h1 {
   font-family: Arial;
 }
 
+h4 {
+  font-size: 20px;
+}
+
+.alert {
+  margin-top: 5px;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+nav.navbar-dark {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+#app {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  width: 500px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 

@@ -64,6 +64,9 @@
         </style>
     </head>
     <body>
+        @extends('layouts/app')
+
+        @section('page-content')
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -94,5 +97,23 @@
                 </div>
             </div>
         </div>
+        
+        {{-- Embedd vue --}}
+        <div id="app">
+            Vue App
+             <br><br>
+             <Example-Component></Example-Component>
+            
+            @if ( isset($myAttribute) )
+                {{$myAttribute}}
+            @endif
+
+
+            </div>
+        <script src='js/app.js'></script>
+        {{-- Embedd vue --}}
+
+        @endsection
+
     </body>
 </html>
